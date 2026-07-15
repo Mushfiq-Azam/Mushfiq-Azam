@@ -41,9 +41,10 @@ PAD = 20
 TITLEBAR_H = 30
 STATUS_H = 30
 ART_W = COLS * CELL_W
+# ART_H is recomputed after sampling, once we've trimmed all-blank top/bottom
+# rows (photo headroom / footroom).
 ART_H = ROWS * CELL_H
 CANVAS_W = ART_W + PAD * 2
-CANVAS_H = TITLEBAR_H + ART_H + STATUS_H + PAD
 
 BG = "#0d1117"
 BG2 = "#111722"
@@ -81,6 +82,15 @@ for y in range(ROWS):
         chars.append(RAMP[idx])
     rows_txt.append("".join(chars))
 
+# trim all-blank rows top+bottom (photo headroom/footroom) so the card sits tight
+while rows_txt and not rows_txt[0].strip():
+    rows_txt.pop(0)
+while rows_txt and not rows_txt[-1].strip():
+    rows_txt.pop()
+
+ROWS = len(rows_txt)
+ART_H = ROWS * CELL_H
+CANVAS_H = TITLEBAR_H + ART_H + STATUS_H + PAD
 art_top = TITLEBAR_H + PAD * 0.35
 
 # ---- 2. assemble SVG ------------------------------------------------------

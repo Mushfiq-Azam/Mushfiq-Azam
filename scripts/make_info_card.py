@@ -14,7 +14,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "info-card.svg")
 STATIC = bool(os.environ.get("STATIC"))
 
-W, H = 480, 875
+W = 480
 PAD = 20
 TITLEBAR_H = 30
 KEY_X = PAD
@@ -83,21 +83,7 @@ def rise(inner, i):
             f'begin="{delay:.2f}s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></g>')
 
 
-parts = [
-    f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
-    f'font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">',
-    '<defs>'
-    f'<linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">'
-    f'<stop offset="0" stop-color="{BG2}"/><stop offset="1" stop-color="{BG}"/></linearGradient></defs>',
-    f'<rect width="{W}" height="{H}" rx="12" fill="url(#ibg)"/>',
-    f'<rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="12" fill="none" stroke="{FRAME}"/>',
-    f'<line x1="0" y1="{TITLEBAR_H}" x2="{W}" y2="{TITLEBAR_H}" stroke="{FRAME}"/>',
-]
-for i, dotcol in enumerate(["#ff5f56", "#ffbd2e", "#27c93f"]):
-    parts.append(f'<circle cx="{PAD + i*16}" cy="{TITLEBAR_H/2}" r="5" fill="{dotcol}"/>')
-parts.append(f'<text x="{W/2}" y="{TITLEBAR_H/2 + 4}" fill="{MUTED}" font-size="12" '
-             f'text-anchor="middle">{esc(HOST)}@github: ~$ neofetch</text>')
-
+body = []
 y = TITLEBAR_H + 30
 for i, row in enumerate(ROWS):
     kind = row[0]
@@ -128,11 +114,28 @@ for i, row in enumerate(ROWS):
                  f'<text x="{KEY_X+14}" y="{y:.1f}" fill="{INK}" font-size="12.5">{txt}</text>')
     else:
         continue
-    parts.append(rise(inner, i))
+    body.append(rise(inner, i))
     y += LINE_H
 
+H = int(round(y + PAD - LINE_H * 0.5))
+
+parts = [
+    f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
+    f'font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">',
+    '<defs>'
+    f'<linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">'
+    f'<stop offset="0" stop-color="{BG2}"/><stop offset="1" stop-color="{BG}"/></linearGradient></defs>',
+    f'<rect width="{W}" height="{H}" rx="12" fill="url(#ibg)"/>',
+    f'<rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="12" fill="none" stroke="{FRAME}"/>',
+    f'<line x1="0" y1="{TITLEBAR_H}" x2="{W}" y2="{TITLEBAR_H}" stroke="{FRAME}"/>',
+]
+for i, dotcol in enumerate(["#ff5f56", "#ffbd2e", "#27c93f"]):
+    parts.append(f'<circle cx="{PAD + i*16}" cy="{TITLEBAR_H/2}" r="5" fill="{dotcol}"/>')
+parts.append(f'<text x="{W/2}" y="{TITLEBAR_H/2 + 4}" fill="{MUTED}" font-size="12" '
+             f'text-anchor="middle">{esc(HOST)}@github: ~$ neofetch</text>')
+parts.extend(body)
 parts.append("</svg>")
 svg = "".join(parts)
 with open(OUT, "w") as f:
     f.write(svg)
-print("wrote", OUT, len(svg), "bytes;", W, "x", H, "content_bottom", round(y))
+print("wrote", OUT, len(svg), "bytes;", W, "x", H)
