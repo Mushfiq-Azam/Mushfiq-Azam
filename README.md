@@ -27,7 +27,7 @@
 </p>
 
 <h3 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=22&pause=1000&color=39D353&center=true&vCenter=true&width=680&lines=Final-year+ECE+%40+North+South+University;Building+intelligent+systems+that+solve+real+problems;Deep+Learning+%C2%B7+Computer+Vision+%C2%B7+NLP;Open+to+research+%26+collaboration" alt="typing"/>
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=22&pause=1000&color=39D353&center=true&vCenter=true&width=680&lines=Final-year+ECE+%40+North+South+University;_Building+intelligent+systems+that+solve+real+problems;Deep+Learning+%C2%B7+Computer+Vision+%C2%B7+NLP;Open+to+research+%26+collaboration" alt="typing"/>
 </h3>
 
 <br/>
