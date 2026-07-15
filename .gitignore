@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# local prep artifacts — not needed on GitHub
+source-photo.jpg
+source-prepped.png
+avi-ascii-preview.svg
+info-card-preview.svg
