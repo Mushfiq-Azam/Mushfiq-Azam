@@ -41,7 +41,7 @@
 
 <br/>
 
-<h3 align="center">🛠 &nbsp;Tech Stack</h3>
+<h3 align="center">— &nbsp;Tech Stack &nbsp;—</h3>
 
 <table align="center">
   <tr>
@@ -90,34 +90,21 @@
 
 <br/>
 
-<h3 align="center">📊 &nbsp;GitHub Stats</h3>
+<h3 align="center">— &nbsp;Streak &nbsp;—</h3>
 
 <p align="center">
-  <img height="180" src="https://github-readme-stats.vercel.app/api?username=Mushfiq-Azam&show_icons=true&count_private=true&hide_border=true&title_color=39d353&icon_color=22d3ee&text_color=e6edf3&bg_color=0d1117"/>
   <img height="180" src="https://github-readme-streak-stats.herokuapp.com/?user=Mushfiq-Azam&hide_border=true&background=0d1117&stroke=1f6feb&ring=39d353&fire=f2cc60&currStreakLabel=22d3ee&currStreakNum=e6edf3&sideNums=e6edf3&sideLabels=7d8590&dates=7d8590"/>
-</p>
-
-<p align="center">
-  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mushfiq-Azam&layout=compact&hide_border=true&title_color=39d353&text_color=e6edf3&bg_color=0d1117&langs_count=8"/>
 </p>
 
 <br/>
 
-<h3 align="center">🌱 &nbsp;Contribution Activity</h3>
+<h3 align="center">— &nbsp;Contribution Activity &nbsp;—</h3>
 
 <p align="center"><img src="contrib-heatmap.svg?v=2" alt="Contribution heatmap"/></p>
 
 <br/>
 
-<h3 align="center">🏆 &nbsp;Trophies</h3>
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Mushfiq-Azam&theme=algolia&no-frame=true&column=7&margin-w=6"/>
-</p>
-
-<br/>
-
-## <sub>👨‍💻</sub> About
+## About
 
 I'm Mushfiq Azam, a final-year Electrical &amp; Computer Engineering student at
 **North South University**, Dhaka. My focus is Artificial Intelligence and
@@ -125,10 +112,10 @@ Machine Learning — I like building systems that see, read, and reason about th
 real world. Right now that means semantic segmentation research, NLP for a
 financial-advisor project, and pushing everything I learn into open-source code.
 
-- 🔬  Current focus &nbsp;·&nbsp; deep learning for semantic segmentation, applied NLP
-- 🧭  Looking for &nbsp;·&nbsp; research collaboration, ML internships, open-source contributors
-- 📫  Reach me at &nbsp;·&nbsp; [mushfiq.azam7860@gmail.com](mailto:mushfiq.azam7860@gmail.com)
-- ⚡  Fun fact &nbsp;·&nbsp; my portrait above is drawn with actual ASCII characters, no image tag
+- **Current focus** &nbsp;·&nbsp; deep learning for semantic segmentation, applied NLP
+- **Looking for** &nbsp;·&nbsp; research collaboration, ML internships, open-source contributors
+- **Reach me at** &nbsp;·&nbsp; [mushfiq.azam7860@gmail.com](mailto:mushfiq.azam7860@gmail.com)
+- **Note** &nbsp;·&nbsp; the portrait above is drawn with real ASCII characters, no raster image
 
 <br/>
 
